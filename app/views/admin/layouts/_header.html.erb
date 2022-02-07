@@ -4,22 +4,14 @@
       <div class="col-md-8">
         <div class="user-menu">
           <ul>
-            <li>
-              <%= link_to t("header.my_cart"), cart_path %>
-            </li>
-            <li>
-              <%= link_to t("header.checkout"), checkout_path %>
-            </li>
             <% if logged_in? %>
               <li><%= link_to t("header.my_account"), current_user %></li>
               <li><%= link_to t("logout"), logout_path, method: :delete %></li>
-              <% if current_user.admin? %>
-                <li><%= link_to t("admin_page"), admin_root_path %></li>
-              <% end %>
             <% else %>
               <li><%= link_to t("login"), login_path %></li>
               <li><%= link_to t("signup"), signup_path %></li>
             <% end %>
+            <li><%= link_to t("base_title_page"), root_path %></li>
           </ul>
         </div>
       </div>
@@ -61,12 +53,6 @@
           </h1>
         </div>
       </div>
-
-      <div class="col-sm-6">
-        <div class="shopping-item">
-          <%= link_to "#{t("header.cart")}<i class='fa fa-shopping-cart'></i>".html_safe, cart_path %>
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -86,17 +72,21 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li>
-            <%= link_to t("home"), root_path, class: "active" %>
+            <%= link_to t("home"), admin_root_path, class: "active" %>
           </li>
           <li>
-            <%= link_to t("header.product"), products_path %>
+            <%= link_to t("admin.header.products"), admin_products_path %>
           </li>
           <li>
-            <%= link_to t("header.cart"), cart_path %>
+            <%= link_to t("admin.header.categories"), "#" %>
           </li>
           <li>
-            <%= link_to t("header.checkout"), checkout_path %>
+            <%= link_to t("admin.header.orders"), "#" %>
           </li>
+          <li>
+            <%= link_to t("admin.header.chart"), "#" %>
+          </li>
+
           <li>
             <a href="#">
               <%= t "header.category" %>

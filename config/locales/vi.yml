@@ -1,7 +1,9 @@
 vi:
   base_title_page: "Bán điện thoại"
+  admin_page: "Trang quản trị viên"
   login: "Đăng nhập"
   home: "Trang chủ"
+  not_admin: "Bạn không có quyền quản trị viên"
   header:
     my_account: "Tài khoản của tôi"
     wishlist: "Danh sách yêu thích"
@@ -155,3 +157,70 @@ vi:
     nav:
       next: "Sau"
       prev: "Trước"
+  admin:
+    format_time: "%H:%M Ngày: %d/%m/%Y"
+    are_you_sure: "Bạn có chắc không?"
+    header:
+      product: "Sản phẩm"
+      categories: "Loại sản phẩm"
+      orders: "Đơn đặt hàng"
+      chart: "Biểu đồ"
+    home:
+      name_view: "Trang chủ"
+    products:
+      created_success: "Sản phẩm đã được tạo thành công."
+      updated_success: "Sản phẩm đã được cập nhật thành công."
+      destroyed_success: "Sản phẩm đã được xóa thành công."
+      fail_product: "Xử lý sản phẩm thất bại!"
+      form:
+        name: "Tên sản phẩm"
+        desc: "Mô tả"
+        categories: "Loại sản phẩm"
+        category: "Loại sản phẩm"
+        submit: "Gửi"
+        image: "Ảnh"
+        created_at: "Thời điểm tạo"
+        updated_at: "Thời điểm cập nhật"
+      edit:
+        name_view: "Sửa sản phẩm"
+      index:
+        details: "Chi tiết"
+        handle: "Xử lý"
+        name_view: "Danh sách sản phẩm"
+        new_button: "Thêm sản phẩm mới"
+      new:
+        name_view: "Sản phẩm mới"
+      show:
+        index: "Thứ tự"
+        handle: "Xử lý"
+        new_button: "Thêm chi tiết sản phẩm mới"
+    product_details:
+      valid_image:
+        format: "phải định dạng hình ảnh hợp lệ"
+        size: "kính thước phải nhỏ hơn 5MB"
+      created_success: "Chi tiết sản phẩm được tạo thành công."
+      updated_success: "Chi tiết sản phẩm được cập nhật thành công."
+      destroyed_success: "Chi tiết sản phẩm được xóa thành công."
+      form:
+        screen: "Màn hình"
+        system: "Hệ thống"
+        rear_camera: "Camera chính"
+        front_camera: "Camera trước"
+        ram: "Bộ nhớ RAM"
+        cpu: "Chip xử lý CPU"
+        sim: "SIM"
+        battery_capacity: "Dung lượng pin"
+        quantity: "Số lượng"
+        cost: "Giá"
+        image: "Ảnh"
+        fix_image: "Thêm ảnh để chỉnh sửa ảnh ở trên"
+        color: "Màu sắc"
+        size: "Dung lượng bộ nhớ"
+        submit: "Gửi"
+        capacity: "Dung lượng bộ nhớ"
+    button:
+      show: "Chi tiết"
+      back: "Trở về"
+      edit: "Sửa"
+      destroy: "Xóa"
+      show_user: "Xem sản phẩm"

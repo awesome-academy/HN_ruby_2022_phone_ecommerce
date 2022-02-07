@@ -1,8 +1,10 @@
 en:
   activate: "Activate"
   base_title_page: "Phone ecommerce"
+  admin_page: "Admin page"
   login: "Login"
   home: "Home"
+  not_admin: "You do not have administrator rights"
   header:
     my_account: "My Account"
     wishlist: "Wishlist"
@@ -144,3 +146,71 @@ en:
   click_login: "Click here to login"
   billing_details: "Billing details"
   login_to_order: "Please login before order!"
+  admin:
+    format_time: "%H:%M Date: %d/%m/%Y"
+    are_you_sure: "Are you sure?"
+    header:
+      product: "Products"
+      categories: "Categories"
+      orders: "Orders"
+      chart: "Chart"
+    home:
+      name_view: "Home page"
+    products:
+      created_success: "Product was successfully created."
+      updated_success: "Product was successfully updated."
+      destroyed_success: "Product was successfully destroyed."
+      fail_product: "Processing of product failed!"
+      form:
+        name: "Name"
+        desc: "Description"
+        categories: "Categories"
+        category: "Category"
+        submit: "Submit"
+        image: "Image"
+        created_at: "Created at"
+        updated_at: "Updated at"
+      edit:
+        name_view: "Editing Product"
+      index:
+        details: "Details"
+        handle: "Handle"
+        name_view: "Admin Products"
+        new_button: "New Admin Product"
+      new:
+        name_view: "New Admin Product"
+      show:
+        index: "Index"
+        handle: "Handle"
+        new_button: "New Product Detail"
+    product_details:
+      valid_image:
+        format: "must be a valid image format"
+        size: "should be less than 5MB"
+      fail_product_detail: "Processing of product detail failed!"
+      created_success: "Product detail was successfully created."
+      updated_success: "Product detail was successfully updated."
+      destroyed_success: "Product detail was successfully destroyed."
+      form:
+        screen: "Screen"
+        system: "System"
+        rear_camera: "Rear camera"
+        front_camera: "Front camera"
+        ram: "RAM"
+        cpu: "CPU"
+        sim: "SIM"
+        battery_capacity: "Battery capacity"
+        quantity: "Quantity"
+        cost: "Cost"
+        image: "Image"
+        fix_image: "Add a photo to edit the photo above"
+        color: "Color"
+        size: "Size"
+        submit: "Submit"
+        capacity: "Capacity"
+    button:
+      show: "Show"
+      back: "Back"
+      edit: "Edit"
+      destroy: "Destroy"
+      show_user: "Show user"

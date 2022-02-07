@@ -1,0 +1,53 @@
+<br>
+<h2 class="related-products-title"><%= t "admin.products.index.name_view" %></h2>
+<%= link_to button_to(t("admin.products.index.new_button")),
+            new_admin_product_path %>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= t "admin.products.show.index" %></th>
+      <th><%= t "admin.products.form.category" %></th>
+      <th><%= t "admin.products.form.name" %></th>
+      <th><%= t "admin.products.form.image" %></th>
+      <th style="width: 30%" ><%= t "admin.products.form.desc" %></th>
+      <th><%= t "admin.products.index.details" %></th>
+      <th colspan="2"><%= t "admin.products.index.handle" %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% i = 0 %>
+    <% @admin_products.each do |admin_product| %>
+      <tr>
+        <td><%= i = i + 1 %></td>
+        <td><%= admin_product.category.name %></td>
+        <td><%= admin_product.name %></td>
+        <td><%= display_first_image_product admin_product,
+                                            Settings.size_image_big %></td>
+        <td><%= admin_product.desc %></td>
+        <td><div class="product-details-select">
+          <% admin_product.product_details.each do |product_detail| %>
+            <%= link_to button_tag(
+                        sanitize("#{product_detail.product_color.name}
+                        - #{product_detail.product_size.name}
+                         <br><strong>#{display_cost product_detail.cost}</strong>"),
+                        type: "button",
+                        class: "btn btn-default btn-details-select"),
+                        admin_product_detail_path(product_detail) %>
+              <% end %>
+        </div></td>
+        <td><%= link_to t("admin.button.show_user"), admin_product %></td>
+        <td><%= link_to t("admin.products.index.details"),
+                        admin_product_path(admin_product) %></td>
+        <td><%= link_to t("admin.button.edit"),
+                        edit_admin_product_path(admin_product) %></td>
+        <td><%= link_to t("admin.button.destroy"),
+                        admin_product_path(admin_product),
+                        method: :delete, data: {confirm: t("admin.are_you_sure") }%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%== pagy_bootstrap_nav @pagy %>
+<br>

@@ -918,6 +918,7 @@ ol.slide-indicators li.active {
 input[type='text'],
 input[type='password'],
 input[type='email'],
+input[type='number'],
 textarea {
   border: 1px solid $white-d;
   padding: 10px;
@@ -1438,7 +1439,8 @@ div.cart-collaterals ul.products li.product:hover .add_to_cart_button {
 }
 
 .single-shop-product {
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 //

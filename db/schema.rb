@@ -40,6 +40,17 @@ ActiveRecord::Schema.define(version: 2022_02_08_014303) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "carts", charset: "utf8mb4", force: :cascade do |t|
+    t.integer "quantity", limit: 2
+    t.datetime "date_add"
+    t.bigint "user_id", null: false
+    t.bigint "product_detail_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_detail_id"], name: "index_carts_on_product_detail_id"
+    t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.text "desc"
@@ -92,9 +103,11 @@ ActiveRecord::Schema.define(version: 2022_02_08_014303) do
     t.string "delivery_phone"
     t.integer "status", limit: 1
     t.datetime "shiped_date"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "note"
+    t.string "customer_name"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -172,8 +185,9 @@ ActiveRecord::Schema.define(version: 2022_02_08_014303) do
     t.datetime "reset_sent_at"
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "carts", "product_details"
+  add_foreign_key "carts", "users"
   add_foreign_key "comments", "products"
   add_foreign_key "comments", "users"
   add_foreign_key "likes", "products"
