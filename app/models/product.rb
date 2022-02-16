@@ -17,7 +17,7 @@ class Product < ApplicationRecord
   end)
   scope :filter_by_max_cost, (lambda do |max_cost|
     joins(:product_details)
-      .group("product_id")
+      .group("products.id")
       .having("avg(product_details.cost) < ?", max_cost)
   end)
   scope :filter_by_min_cost, (lambda do |min_cost|
@@ -30,7 +30,7 @@ class Product < ApplicationRecord
   scope :top_sellers, (lambda do |size|
     joins(product_details: :order_details)
       .select("products.*, SUM(order_details.quantity) as sum_order")
-      .group("product_id")
+      .group("products.id")
       .order("sum_order DESC")
       .limit(size)
   end)
@@ -42,7 +42,7 @@ class Product < ApplicationRecord
   scope :top_rates, (lambda do |size|
     joins(:rates)
       .select("products.*, AVG(number_of_stars) as avg_stars")
-      .group("product_id")
+      .group("products.id")
       .order(avg_stars: :desc)
       .limit(size)
   end)

@@ -107,17 +107,10 @@ vi:
       your_review: "Đánh gía của bạn"
       related_products: "Sản phẩm có liên quan"
       submit: "Gửi"
-      reviewers: "đánh giá"
-      delete: "Xóa"
-      are_you_sure: "Bạn có chắc không!"
-      your_rating: "Đánh gía của bạn"
   comments:
-    success_add_comment: "Thêm nhận xét thành công"
-    fail_comment: "Xử lý bình luận không thành công!"
-    success_vote: "Thêm đánh gía thành công"
-    failed_vote: "Thêm đáng giá thất bại"
-    destroy:
-      deleted_success: "Đã xóa bình luận thành công"
+    create:
+      success_add_comment: "Thêm nhận xét thành công"
+      fail_add_comment: "Thêm nhật xét thất bại"
   edit_user: "Chỉnh sửa"
   update_your_profile: "Chỉnh sửa thông tin cá nhân"
   activerecord:
@@ -145,13 +138,3 @@ vi:
       view_all: "Xem tất cả"
       top_rating: "Đánh gía cao"
       top_new: "Sản phẩm mới"
-  order:
-    success: "Đặt hàng thành công"
-    title: "Đặt hàng"
-  click_login: "Bấm vào đây để đăng nhập"
-  billing_details: "Chi tiết hóa đơn"
-  login_to_order: "Hãy đăng nhập trước khi đặt hàng!"
-  pagy:
-    nav:
-      next: "Sau"
-      prev: "Trước"

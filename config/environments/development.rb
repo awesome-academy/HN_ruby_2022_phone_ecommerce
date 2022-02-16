@@ -79,7 +79,7 @@ Rails.application.configure do
     user_name: ENV["mail_user"],
     password:  ENV["mail_pass"],
     authentication: "plain",
-    enable_starttls_auto: true
+    enable_starttls_auto: true  
   }
 
   # Uncomment if you wish to allow Action Cable access from any origin.
