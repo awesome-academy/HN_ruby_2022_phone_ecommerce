@@ -309,3 +309,8 @@ en:
       login_error: "You need to log in to use the app."
       logout: "Logged out"
       invalid_user: "Invalid email/password combination!"
+      invalid_id: "Invalid Id"
+      handle_failure: "Handling failure!"
+      create_user_success: "Create user successfully"
+      update_user_success: "Update user information successfully"
+      delete_user_success: "Delete user successfully"
